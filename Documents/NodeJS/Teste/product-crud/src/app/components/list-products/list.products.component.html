@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="list.products.component.css">
+  </head>
+  <body>
+    <div class="container">
+      <h2>List of Products</h2>
+
+      <input type="text" class="form-control" placeholder="Search products..." [(ngModel)]="searchTerm" (input)="applyFilter()">
+
+      <div *ngIf="filteredProducts.length === 0" class="alert alert-warning">No products found.</div>
+
+      <div *ngFor="let product of filteredProducts">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="card-text">{{ product.description }}</p>
+            <p class="card-text">Price: {{ product.price }}</p>
+            <p class="card-text">Quantity: {{ product.quantity }}</p>
+            <p class="card-text">ID: {{ product.id }}</p>
+            <button class="btn btn-primary" (click)="updateProduct(product.id)">Update Product</button>
+            <button class="btn btn-danger" (click)="deleteProduct(product.id)">Delete Product</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

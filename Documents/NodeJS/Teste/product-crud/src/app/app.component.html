@@ -1,0 +1,14 @@
+<!-- app.component.html -->
+
+<div class="container">
+  <h1>Produtos</h1>
+  <hr>
+
+  <!-- Navigation buttons -->
+  <div class="btn-group">
+    <button (click)="navigateToCreateProduct()" class="btn btn-primary">Create Product</button>
+    <button (click)="navigateToListProducts()" class="btn btn-primary">List Products</button>
+  </div>
+
+  <router-outlet></router-outlet> <!-- This will render the child component based on the route -->
+</div>

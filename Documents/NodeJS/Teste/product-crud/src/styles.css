@@ -1,0 +1,79 @@
+/* styles.css */
+
+/* Estilos globais para a aplicação */
+
+/* Reset de margens e preenchimentos para todos os elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos básicos para corpo e fontes */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Estilização básica para links */
+a {
+  text-decoration: none;
+  color: #007bff; /* Cor azul padrão para links */
+}
+
+/* Estilos para containers ou wrappers */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos para botões */
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Cor escura ao passar o mouse */
+}
+
+/* Estilos para inputs */
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+/* Estilos para caixas de mensagem */
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}

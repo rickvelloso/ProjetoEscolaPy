@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  web:
+    build: .
+    ports:
+      - "4000:3000"
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgres://rick:123456@db:5432/database
+    depends_on:
+      - db
+
+  db:
+    image: postgres
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 180705
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
